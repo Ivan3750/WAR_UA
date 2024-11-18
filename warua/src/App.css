@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  color: rgb(0, 130, 209);
+font-family: Inter;
+font-size: 30px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0px;
+text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+  display: flex;
+  padding: 8px 40px;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover{
+  cursor: pointer;
+  transition: .3s;
+  scale: 0.95;
+}
+
+/* *{
+  outline: 1px solid #f0f;
+} */
+
+.air-alarm{
+  font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0px;
+color: white ;
+  border: 0;
+  border-radius: 16px;
+  width: 244px;
+height: 45px;
+background: rgb(255, 0, 0);
+}
+
+.data-text{
+  color: rgb(255, 0, 0);
+font-family: Inter;
+font-size: 25px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: left;
+}
+
+.title{
+  color: rgb(0, 0, 0);
+font-family: Inter;
+font-size: 50px;
+font-weight: 700;
+line-height: 61px;
+letter-spacing: 0px;
+text-align: left;
+width: 500px;
+}
+
+.war-days{
+  color: rgb(255, 0, 0);
+font-family: Inter;
+font-size: 50px;
+font-weight: 700;
+line-height: 61px;
+letter-spacing: 0px;
+text-align: left;
+}
+
+.hero-desc{
+  width: 400px;
+  color: rgb(0, 0, 0);
+font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: left;
+}
+
+.btn-support{
+  /* Rectangle 2 */
+width: 275px;
+height: 54px;
+border-radius: 20px;
+border: 0;
+background: rgb(255, 209, 0);
+color: rgb(255, 255, 255);
+font-family: Inter;
+font-size: 25px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: center;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 60px;
+  gap: 50px;
+}
+.heroImg{
+  width: 790px;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}
+.img-war{
+  border-radius: 30px;
+  gap: 50px;
+}
+.img-war:nth-child(2){
+  max-height: 220px;
+}
+.img-war:nth-child(3){
+  max-height: 220px;
+}
+
+.hero-info{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+
+
+.title-images{
+  font-family: Inter;
+font-size: 70px;
+font-weight: 700;
+line-height: 82px;
+letter-spacing: 0px;
+margin: 15px;
+margin-top: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+}
+
+.title-images span{
+  display: block;
+  padding: 10px;
+  width: auto;
+  font-size: 60px;
+  border-radius: 20px;
   color: white;
+background: rgb(255, 0, 0);
+animation: 4s Live infinite;
 }
 
-.App-link {
-  color: #61dafb;
+
+.img-war-ba{
+  height: 400px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.img-block{
+  padding: 20px;
+  display: flex;
+  gap: 55px;
+  flex-direction: row;
+  
+}
+.img-block:nth-child(even){
+  flex-direction: row-reverse;
+
+}
+
+@keyframes Live {
+  0%{
+    scale: 0.9;
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    scale: 1;
+  }
+  100%{
+    scale: 0.9;
+  }
+}
+
+.war-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #222; /* Default background color */
+  transition: background-color 0.5s ease;
+}
+
+.root {
+  animation: airAlarm 1s infinite;
+}
+
+
+
+.air-alarm:hover {
+  transform: scale(1.1);
+}
+
+@keyframes airAlarm {
+  0% {
+      background-color: #890000;
+  }
+  50% {
+      background-color: #ffffff;
+  }
+  100% {
+      background-color: #890000;
   }
 }
